@@ -1,0 +1,168 @@
+
+{{- define "main" -}}
+<div class="article-container publications-page">
+  <h1 class="text-center mb-4">Publications</h1>
+  <p class="text-center text-muted mb-4">Click on a year to expand and view publications. Click on a paper title to see its abstract.</p>
+
+  <div id="publications-loading" class="text-center py-5">
+    <p>Loading publications...</p>
+  </div>
+
+  <div id="publications-container"></div>
+</div>
+
+<script>
+(function() {
+  // Minimal BibTeX parser
+  function parseBibtex(bibtex) {
+    var entries = [];
+    // Match each entry: @type{key, ... }
+    var entryRegex = /@(\w+)\s*\{([^,]*),/g;
+    var match;
+    var positions = [];
+
+    while ((match = entryRegex.exec(bibtex)) !== null) {
+      positions.push({
+        type: match[1].toLowerCase(),
+        key: match[2].trim(),
+        start: match.index,
+        contentStart: match.index + match[0].length
+      });
+    }
+
+    for (var i = 0; i < positions.length; i++) {
+      var end = (i + 1 < positions.length) ? positions[i + 1].start : bibtex.length;
+      var content = bibtex.substring(positions[i].contentStart, end);
+
+      // Find the matching closing brace
+      var braceCount = 1;
+      var j = 0;
+      for (j = 0; j < content.length && braceCount > 0; j++) {
+        if (content[j] === '{') braceCount++;
+        else if (content[j] === '}') braceCount--;
+      }
+      content = content.substring(0, j - 1);
+
+      var entry = {
+        type: positions[i].type,
+        key: positions[i].key
+      };
+
+      // Parse fields
+      var fieldRegex = /(\w+)\s*=\s*(?:\{((?:[^{}]|\{[^{}]*\})*)\}|"([^"]*)"|(\d+))/g;
+      var fieldMatch;
+      while ((fieldMatch = fieldRegex.exec(content)) !== null) {
+        var value = (fieldMatch[2] || fieldMatch[3] || fieldMatch[4] || '').trim();
+        // Clean up LaTeX
+        value = value.replace(/\{([^}]*)\}/g, '$1').replace(/\\\&/g, '&').replace(/\\"/g, '"');
+        entry[fieldMatch[1].toLowerCase()] = value;
+      }
+
+      if (entry.title) {
+        entries.push(entry);
+      }
+    }
+    return entries;
+  }
+
+  function cleanTitle(title) {
+    return title.replace(/\{/g, '').replace(/\}/g, '').replace(/\\\\/g, '');
+  }
+
+  function cleanAuthors(authors) {
+    if (!authors) return '';
+    return authors.replace(/\{/g, '').replace(/\}/g, '').replace(/ and /g, ', ');
+  }
+
+  function getVenue(entry) {
+    return entry.journal || entry.booktitle || entry.publisher || '';
+  }
+
+  fetch('/mypublications.bib')
+    .then(function(response) { return response.text(); })
+    .then(function(bibtex) {
+      var entries = parseBibtex(bibtex);
+
+      // Group by year
+      var byYear = {};
+      entries.forEach(function(entry) {
+        var year = entry.year || 'Unknown';
+        if (!byYear[year]) byYear[year] = [];
+        byYear[year].push(entry);
+      });
+
+      // Sort years descending
+      var years = Object.keys(byYear).sort(function(a, b) { return b - a; });
+
+      var container = document.getElementById('publications-container');
+      var html = '';
+
+      years.forEach(function(year, idx) {
+        var papers = byYear[year];
+        var showClass = idx === 0 ? 'show' : '';
+        var expandedAttr = idx === 0 ? 'true' : 'false';
+
+        html += '<div class="pub-year-section mb-3">';
+        html += '<a class="pub-year-header" data-toggle="collapse" href="#year-' + year + '" role="button" aria-expanded="' + expandedAttr + '">';
+        html += '<span class="pub-year-title">' + year + '</span>';
+        html += '<span class="pub-year-count">' + papers.length + ' paper' + (papers.length !== 1 ? 's' : '') + '</span>';
+        html += '<span class="pub-caret">&#9660;</span>';
+        html += '</a>';
+        html += '<div class="collapse ' + showClass + '" id="year-' + year + '">';
+        html += '<div class="pub-year-list">';
+
+        papers.forEach(function(entry) {
+          var title = cleanTitle(entry.title);
+          var authors = cleanAuthors(entry.author);
+          var venue = getVenue(entry);
+          var url = entry.url || (entry.doi ? 'https://doi.org/' + entry.doi.replace('https://doi.org/', '') : '');
+          var hasAbstract = entry.abstract && entry.abstract.length > 0;
+          var entryId = 'abs-' + entry.key.replace(/[^a-zA-Z0-9]/g, '_');
+
+          html += '<div class="pub-entry">';
+          html += '<div class="pub-title">';
+          if (hasAbstract) {
+            html += '<a class="pub-title-link" data-toggle="collapse" href="#' + entryId + '" role="button" aria-expanded="false">';
+            html += title + '</a>';
+          } else {
+            html += title;
+          }
+          html += '</div>';
+          html += '<div class="pub-authors">' + authors + '</div>';
+          if (venue) {
+            html += '<div class="pub-venue">' + venue;
+            if (entry.volume) html += ', Vol. ' + entry.volume;
+            if (entry.year) html += ' (' + entry.year + ')';
+            html += '</div>';
+          }
+          html += '<div class="pub-links">';
+          if (url) html += '<a href="' + url + '" target="_blank" rel="noopener" class="pub-link">Paper</a>';
+          if (entry.doi) {
+            var doiUrl = entry.doi.startsWith('http') ? entry.doi : 'https://doi.org/' + entry.doi;
+            html += '<a href="' + doiUrl + '" target="_blank" rel="noopener" class="pub-link">DOI</a>';
+          }
+          if (hasAbstract) {
+            html += '<a class="pub-link pub-abstract-toggle" data-toggle="collapse" href="#' + entryId + '" role="button" aria-expanded="false">Abstract</a>';
+          }
+          html += '</div>';
+          if (hasAbstract) {
+            html += '<div class="collapse" id="' + entryId + '">';
+            html += '<div class="pub-abstract">' + entry.abstract + '</div>';
+            html += '</div>';
+          }
+          html += '</div>';
+        });
+
+        html += '</div></div></div>';
+      });
+
+      document.getElementById('publications-loading').style.display = 'none';
+      container.innerHTML = html;
+    })
+    .catch(function(err) {
+      document.getElementById('publications-loading').innerHTML = '<p class="text-danger">Error loading publications. Please try refreshing.</p>';
+      console.error('Error loading publications:', err);
+    });
+})();
+</script>
+{{- end -}}

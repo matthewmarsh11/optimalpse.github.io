@@ -8,42 +8,26 @@ main:
     url: research
     identifier: research
     weight: 10
-  - name: Data-Driven Optimization
+  - name: BO & Data-Driven Optimization
     parent: research
-    url: research/data-driven-optimization
-    weight: 2
-  - name: Reinforcement Learning
-    parent: research
-    url: research/reinforcement-learning
-    weight: 4
-  - name: Bayesian Optimization
-    parent: research
-    url: research/bayesian-optimization
+    url: "research/#bo-ddo"
     weight: 1
-  - name: Supply Chain Optimization
+  - name: RL & Process Control
     parent: research
-    url: research/supply-chain-optimization
+    url: "research/#rl-control"
+    weight: 2
+  - name: LLMs & AI Agents
+    parent: research
+    url: "research/#llms"
     weight: 3
-  - name: Hybrid Modelling
+  - name: Discovery & Molecular Design
     parent: research
-    url: research/hybrid-modelling
-    weight: 7
-  - name: Large Language Models
+    url: "research/#discovery"
+    weight: 4
+  - name: Sustainability & Supply Chains
     parent: research
-    url: research/large-language-models
-    weight: 6 
-  - name: Statistical Learning
-    parent: research
-    url: research/statistical-learning
+    url: "research/#sustainability"
     weight: 5
-  - name: Deep Learning in Chemical Engineering
-    parent: research
-    url: research/deep-learning-in-ce
-    weight: 9
-  - name: Process Control
-    parent: research
-    url: research/process-control
-    weight: 8
   - name: News
     url: news
     weight: 20

@@ -19,14 +19,23 @@
 
 {{ $src := .Get "path" }}
 {{ $delimiter := .Get "delimiter" | default "," }}
-{{ $useHeaderRow := (eq (lower (.Get "header")) "true") | default true }}
+{{ $headerParam := .Get "header" | default "true" }}
+{{ $useHeaderRow := eq (lower $headerParam) "true" }}
 {{ $caption := .Get "caption" }}
 
-{{ $is_remote := strings.HasPrefix $src "http" }}
-{{ if not $is_remote }}
-  {{ $src = path.Join  "content" $.Page.File.Dir $src }}
+{{ $rows := slice }}
+{{ $opts := dict "delimiter" $delimiter }}
+{{ $isRemote := strings.HasPrefix $src "http" }}
+{{ if $isRemote }}
+  {{ with resources.GetRemote $src }}
+    {{ $rows = transform.Unmarshal $opts .Content }}
+  {{ else }}
+    {{ errorf "Unable to fetch remote CSV: %s" $src }}
+  {{ end }}
+{{ else }}
+  {{ $localPath := path.Join "content" $.Page.File.Dir $src }}
+  {{ $rows = transform.Unmarshal $opts (readFile $localPath) }}
 {{ end }}
-{{ $rows := getCSV $delimiter $src }}
 
 <table class="table">
   {{ if $useHeaderRow }}

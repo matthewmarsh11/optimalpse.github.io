@@ -1,36 +1,151 @@
 ---
 title: Research
-type: Landing
+type: research
 date: 2024-05-19
 draft: false
 
-sections:
-  - block: collection
-    content:
-      title:
-      subtitle: ''
-      text:
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 0
-      # Filter on criteria
-      filters:
-        # The folders to display content from
-        folders:
-          - research
-        category: ""
-        tag: ""
-        publication_type: ""
-        featured_only: false
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-      # Choose how many pages you would like to offset by
-      # Useful if you wish to show the first item in the Featured widget
-      offset: 0
-      # Field to sort by, such as Date or Title
-      sort_by: 'Date'
-      sort_ascending: false
-    design:
-      # Choose a listing view
-      view: compact
+themes:
+  - title: "Bayesian Optimization & Data-Driven Optimization"
+    key: "bo-ddo"
+    description: "Many engineering optimization problems can be described as 'costly' black-box problems, where the number of function evaluations is constrained. Our research develops efficient optimization methods that rely solely on function evaluations — from surrogate-based approaches such as Bayesian optimization to direct derivative-free methods. We also explore human-in-the-loop Bayesian optimization, enabling domain experts such as engineers and chemists to inform the decision-making process. This spans applications including experimental design, catalyst discovery, and bioprocess optimization."
+    papers:
+      - title: "A Decomposition Approach to Solving Numerical Constraint Satisfaction Problems on Directed Acyclic Graphs"
+        authors: "M. Mowbray, N. Shah, B. Chachuat"
+        venue: "arXiv preprint, 2025"
+        url: "https://arxiv.org/abs/2511.10426"
+      - title: "Predicting calcium carbonate yield from wet carbonation of recycled cement paste using interpretable ensemble machine learning"
+        authors: "Y. Li, EA del Rio Chanona, HS Wong"
+        venue: "Journal of Cleaner Production, 2025"
+        url: "https://www.sciencedirect.com/science/article/pii/S0959652625010777"
+      - title: "Data-driven optimization for process systems engineering applications"
+        authors: "D. van de Berg, T. Savage, P. Petsagkourakis, D. Zhang, N. Shah, EA del Rio-Chanona"
+        venue: "Chemical Engineering Science, 2022"
+        url: "https://www.sciencedirect.com/science/article/pii/S0009250921007004"
+      - title: "An integrated dimensionality reduction and surrogate optimization approach for plant-wide chemical process operation"
+        authors: "T. Savage, F. Almeida-Trasvina, EA Del Rio Chanona, R. Smith, D. Zhang"
+        venue: "AIChE Journal, 2021"
+        url: "https://aiche.onlinelibrary.wiley.com/doi/abs/10.1002/aic.17358"
+      - title: "Data-driven coordination of expensive black-boxes"
+        authors: "D. van de Berg, P. Petsagkourakis, N. Shah, EA del Rio-Chanona"
+        venue: "Computer Aided Chemical Engineering, 2022"
+        url: "https://www.sciencedirect.com/science/article/pii/B9780323851596501937"
+      - title: "Surrogate Modelling and Optimization for Complex Liquefied Natural Gas Refrigeration Cycles"
+        authors: "T. Savage, F. Almeida-Trasvina, A. Del-Rio Chanona, R. Smith, D. Zhang"
+        venue: "IFAC-PapersOnLine, 2020"
+        url: "https://www.sciencedirect.com/science/article/pii/S2405896320305978"
+
+  - title: "Reinforcement Learning & Process Control"
+    key: "rl-control"
+    description: "Reinforcement Learning (RL) is a subfield of AI which trains models to make optimal sequential decisions. Chemical processes are inherently stochastic and dynamic — making RL a natural fit. However, traditional RL is data-hungry and does not consider safety constraints, which is a major drawback for process engineering. Our research designs new RL algorithms that can optimize complex chemical and biochemical processes while respecting safety constraints and requiring fewer data. We also develop advanced model predictive control strategies and hierarchical control architectures that integrate learning-based methods with classical control."
+    papers:
+      - title: "Control-informed reinforcement learning for chemical processes"
+        authors: "M. Bloor, A. Ahmed, N. Kotecha"
+        venue: "Industrial & Engineering Chemistry Research, 2025"
+        url: "https://pubs.acs.org/doi/abs/10.1021/acs.iecr.4c03233"
+      - title: "PC-Gym: Benchmark environments for process control problems"
+        authors: "M. Bloor, J. Torraca, IO Sandoval, A. Ahmed"
+        venue: "Computers & Chemical Engineering, 2025"
+        url: "https://www.sciencedirect.com/science/article/pii/S0098135425003667"
+      - title: "A survey and tutorial of reinforcement learning methods in process systems engineering"
+        authors: "M. Bloor, M. Mowbray, EA del Rio Chanona"
+        venue: "Computers & Chemical Engineering, 2025"
+        url: "https://www.sciencedirect.com/science/article/pii/S0098135425005186"
+      - title: "Data-driven Koopman MPC using mixed stochastic-deterministic tubes"
+        authors: "Z. Zhong, EA del Rio-Chanona"
+        venue: "Journal of Process Control, 2025"
+        url: "https://www.sciencedirect.com/scaience/article/pii/S0959152425001611"
+      - title: "Nonlinear Wasserstein distributionally robust optimal control"
+        authors: "Z. Zhong, JJ Zhu"
+        venue: "arXiv preprint, 2023"
+        url: "https://arxiv.org/abs/2304.07415"
+      - title: "Distributional reinforcement learning for scheduling of chemical production processes"
+        authors: "M. Mowbray, D. Zhang, EA del Rio Chanona"
+        venue: "arXiv preprint, 2022"
+        url: "https://arxiv.org/abs/2203.00636"
+      - title: "Chance Constrained Policy Optimization for Process Control and Optimization"
+        authors: "P. Petsagkourakis, IO Sandoval, E. Bradford, F. Galvanin, D. Zhang, EA del Rio-Chanona"
+        venue: "Journal of Process Control, 2022"
+        url: "https://www.sciencedirect.com/science/article/pii/S0959152422000038"
+      - title: "Hierarchical Reinforcement Learning for Plantwide Control"
+        authors: "M. Bloor, A. Ahmed, N. Kotecha, C. Tsay"
+        venue: "Computer Aided Chemical Engineering, 2024"
+        url: "https://www.sciencedirect.com/science/article/pii/B978044328824150274X"
+
+  - title: "Large Language Models & Generative AI"
+    key: "llms"
+    description: "Our research advances large language models (LLMs) to serve as comprehensive scientific research assistants and autonomous agents. We investigate the limitations of LLMs in tasks requiring deep understanding beyond textual data, develop novel approaches to fine-tune pre-trained models for research-focused outputs, and build multi-agent systems for chemical lab management and process safety automation. Our goal is to create AI agents that can provide specialized support throughout the research and engineering pipeline."
+    papers:
+      - title: "Large language model uncertainty proxies: discrimination and calibration for medical diagnosis and treatment"
+        authors: "T. Savage, J. Wang, R. Gallo, A. Boukil"
+        venue: "Journal of the American Medical Informatics Association, 2025"
+        url: "https://academic.oup.com/jamia/article-abstract/32/1/139/7819854"
+      - title: "Diagnostic reasoning prompts reveal the potential for large language model interpretability in medicine"
+        authors: "T. Savage, A. Nayak, R. Gallo, E. Rangan"
+        venue: "NPJ Digital Medicine, 2024"
+        url: "https://www.nature.com/articles/s41746-024-01010-1"
+      - title: "An analysis of multi-agent reinforcement learning for decentralized inventory control systems"
+        authors: "M. Mousa, D. van de Berg, N. Kotecha"
+        venue: "Computers & Chemical Engineering, 2024"
+        url: "https://www.sciencedirect.com/science/article/pii/S0098135424002011"
+      - title: "An Attentive Graph Agent for Topology-Adaptive Cyber Defence"
+        authors: "IO Sandoval, IS Thompson, V. Mavroudis"
+        venue: "arXiv preprint, 2025"
+        url: "https://arxiv.org/abs/2501.14700"
+
+  - title: "Discovery & Molecular Design"
+    key: "discovery"
+    description: "We apply machine learning to accelerate scientific discovery, from catalyst design to molecular property prediction. This includes symbolic regression for interpretable model discovery, machine learning interatomic potentials for molecular dynamics, Bayesian optimization for chemical experiments, and deep learning methods for chemical engineering applications. Our work also covers hybrid modelling — combining first-principles models with data-driven approaches to create more accurate representations of complex systems, leveraging Bayesian inference, transfer learning, and multiscale modeling."
+    papers:
+      - title: "Constraint-Guided Symbolic Regression for Data-Efficient Kinetic Model Discovery"
+        authors: "M-C. Servia, IO Sandoval, K. Kuok, K. Hellgardt"
+        venue: "arXiv preprint, 2025"
+        url: "https://arxiv.org/abs/2507.02730"
+      - title: "Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning"
+        authors: "M. Radova, WG Stark, CS Allen, RJ Maurer"
+        venue: "npj Computational Materials, 2025"
+        url: "https://www.nature.com/articles/s41524-025-01727-x"
+      - title: "Constructing a symbolic regression-based interpretable soft sensor for industrial data analytics and product quality control"
+        authors: "H. Kay, S. Kay, M. Mowbray, A. Lane"
+        venue: "Industrial & Engineering Chemistry Research, 2024"
+        url: "https://pubs.acs.org/doi/abs/10.1021/acs.iecr.3c04021"
+      - title: "Physics-Informed Automated Discovery of Kinetic Models"
+        authors: "MA de Carvalho Servia, IO Sandoval"
+        venue: "AIChE Annual Meeting, 2024"
+        url: "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2506/LAPSE-2025.0434-1v1.pdf"
+      - title: "Benchmarking of machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces"
+        authors: "WG Stark, C. van der Oord, I. Batatia"
+        venue: "Machine Learning: Science and Technology, 2024"
+        url: "https://iopscience.iop.org/article/10.1088/2632-2153/ad5f11/meta"
+      - title: "Equivariant Representation of Configuration-Dependent Friction Tensors in Langevin Heatbaths"
+        authors: "M. Sachs, WG Stark, RJ Maurer, C. Ortner"
+        venue: "arXiv preprint, 2024"
+        url: "https://arxiv.org/abs/2407.13935"
+      - title: "Cross-disciplinary perspectives on the potential for artificial intelligence across chemistry"
+        authors: "AM Mroz, AR Basford, F. Hastedt"
+        venue: "Chemical Society Reviews, 2025"
+        url: "https://pubs.rsc.org/en/content/articlehtml/2025/cs/d5cs00146c"
+      - title: "Machine learning for biochemical engineering: A review"
+        authors: "M. Mowbray, T. Savage, C. Wu, Z. Song, BA Cho, EA Del Rio-Chanona, D. Zhang"
+        venue: "Biochemical Engineering Journal, 2021"
+        url: "https://www.sciencedirect.com/science/article/pii/S1369703X21001303"
+
+  - title: "Sustainability & Supply Chain Optimization"
+    key: "sustainability"
+    description: "We develop optimization frameworks for sustainable chemical value chains and supply chain operations. This involves mathematical modeling, simulation, and optimization techniques to reduce emissions, improve efficiency, and support the transition toward sustainable chemicals manufacturing. Our research spans the reconfiguration of supply chains, design and operations of integrated energy systems, and graph-based machine learning for configuration of chemical value chains — often in collaboration with industry partners such as BASF."
+    papers:
+      - title: "Distributional reinforcement learning for inventory management in multi-echelon supply chains"
+        authors: "G. Wu, MA de Carvalho Servia, M. Mowbray"
+        venue: "Digital Chemical Engineering, 2023"
+        url: "https://www.sciencedirect.com/science/article/pii/S2772508122000643"
+      - title: "Modelling and Control of Industrial Boiler Networks: Development of an Operator Training Simulator"
+        authors: "BD Setiawan, A. Ahmed, M. Mehmet"
+        venue: "SSRN, 2024"
+        url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4716405"
+      - title: "Superstructure Reaction Network Design for the Synthesis of Biobased Sustainable Nitrogen-Containing Polymers"
+        authors: "T. Savage, D. Zhang"
+        venue: "Industrial & Engineering Chemistry Research, 2020"
+        url: "https://doi.org/10.1021/acs.iecr.9b06511"
+      - title: "Data-driven coordination of subproblems in enterprise-wide optimization under uncertainty"
+        authors: "D. van de Berg, P. Petsagkourakis, N. Shah, EA del Rio-Chanona"
+        venue: "AIChE Journal, 2023"
 ---

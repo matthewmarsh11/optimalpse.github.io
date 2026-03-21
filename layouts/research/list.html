@@ -1,0 +1,42 @@
+{{- define "main" -}}
+<div class="article-container research-themes-page">
+  <h1 class="text-center mb-4">Research Themes</h1>
+  <p class="text-center text-muted mb-5">Our group works across several interconnected research themes. Click "Selected Papers" to explore key publications in each area.</p>
+
+  <div class="row research-themes">
+    {{ range .Params.themes }}
+    <div id="{{ .key }}" class="col-12 {{ if .wide }}col-lg-12{{ else }}col-lg-6{{ end }} mb-4">
+      <div class="research-theme-card">
+        {{ if .image }}
+        <div class="theme-image">
+          <img src="{{ .image }}" alt="{{ .title }}">
+        </div>
+        {{ end }}
+        <h3 class="theme-title">{{ .title }}</h3>
+        <p class="theme-description">{{ .description }}</p>
+        {{ if .team }}
+        <p class="theme-team"><strong>Team:</strong> <em>{{ .team }}</em></p>
+        {{ end }}
+        <a class="btn-selected-papers" data-toggle="collapse" href="#{{ .key }}-papers" role="button" aria-expanded="false" aria-controls="{{ .key }}-papers">
+          Selected Papers <span class="caret-icon">&#9660;</span>
+        </a>
+        <div class="collapse" id="{{ .key }}-papers">
+          <div class="selected-papers-list">
+            <ul>
+              {{ range .papers }}
+              <li>
+                <span class="paper-title">{{ .title }}</span>
+                {{ if .authors }}<br><span class="paper-authors">{{ .authors }}</span>{{ end }}
+                {{ if .venue }}<br><span class="paper-venue">{{ .venue }}</span>{{ end }}
+                {{ if .url }} <a href="{{ .url }}" target="_blank" rel="noopener">[Link]</a>{{ end }}
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{- end -}}

@@ -1,11 +1,6 @@
 ---
 title: Publications
-
-# Listing view
-view: citation
-
-# Optional banner image (relative to `assets/media/` folder).
-banner:
-  caption: ''
-  image: ''
+type: publication
+date: 2024-05-19
+draft: false
 ---
