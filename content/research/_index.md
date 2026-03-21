@@ -73,7 +73,7 @@ themes:
 
   - title: "Large Language Models & Generative AI"
     key: "llms"
-    description: "Our research advances large language models (LLMs) to serve as comprehensive scientific research assistants and autonomous agents. We investigate the limitations of LLMs in tasks requiring deep understanding beyond textual data, develop novel approaches to fine-tune pre-trained models for research-focused outputs, and build multi-agent systems for chemical lab management and process safety automation. Our goal is to create AI agents that can provide specialized support throughout the research and engineering pipeline."
+    description: "Our research leverages large language models (LLMs) and generative AI to support decision-making in process systems engineering. We develop multi-agent LLM frameworks for automating sustainable operational decisions, apply chemistry-aware language models to trace material flows across industrial value chains, and build AI agents for tasks such as chemical lab management and process safety. Our goal is to harness the reasoning and generative capabilities of LLMs to accelerate engineering workflows, from supply chain analysis to experiment planning."
     papers:
       - title: "Multi-Agent LLMs for Automating Sustainable Operational Decision-Making"
         authors: "E. Pajak, A. Bahamdan, K. Hellgardt, A. del Río-Chanona"
