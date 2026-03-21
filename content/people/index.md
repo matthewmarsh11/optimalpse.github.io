@@ -17,8 +17,8 @@ sections:
           - Co-supervised PhD Students
           - MRes Students
           - Administration
-          - Visitors
           - Alumni
+          - Visitors
       sort_by: Params.last_name
       sort_ascending: true
     design:

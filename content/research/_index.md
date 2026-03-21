@@ -9,10 +9,6 @@ themes:
     key: "bo-ddo"
     description: "Many engineering optimization problems can be described as 'costly' black-box problems, where the number of function evaluations is constrained. Our research develops efficient optimization methods that rely solely on function evaluations — from surrogate-based approaches such as Bayesian optimization to direct derivative-free methods. We also explore human-in-the-loop Bayesian optimization, enabling domain experts such as engineers and chemists to inform the decision-making process. This spans applications including experimental design, catalyst discovery, and bioprocess optimization."
     papers:
-      - title: "A Decomposition Approach to Solving Numerical Constraint Satisfaction Problems on Directed Acyclic Graphs"
-        authors: "M. Mowbray, N. Shah, B. Chachuat"
-        venue: "arXiv preprint, 2025"
-        url: "https://arxiv.org/abs/2511.10426"
       - title: "Predicting calcium carbonate yield from wet carbonation of recycled cement paste using interpretable ensemble machine learning"
         authors: "Y. Li, EA del Rio Chanona, HS Wong"
         venue: "Journal of Cleaner Production, 2025"

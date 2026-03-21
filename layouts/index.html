@@ -24,15 +24,36 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-10 mx-auto">
+      {{/* Research Themes Section */}}
       <div class="section-heading">
-        <h2 class="section-title">Latest Research Posts</h2>
+        <h2 class="section-title">Research Themes</h2>
       </div>
-      <div class="latest-research-posts">
-          {{ range first 10 (where .Site.RegularPages "Section" "post") }}
-          <div class="research-post"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+      <div class="research-theme-buttons">
+        {{ $research := .Site.GetPage "/research" }}
+        {{ range $research.Params.themes }}
+        <a href="/research/#{{ .key }}" class="theme-button">{{ .title }}</a>
+        {{ end }}
+      </div>
+
+      {{/* Latest Papers Section */}}
+      <div class="section-heading" style="margin-top: 30px;">
+        <h2 class="section-title">Latest Papers</h2>
+      </div>
+      <div class="latest-papers">
+        {{ $research := .Site.GetPage "/research" }}
+        {{ $papers := slice }}
+        {{ range $research.Params.themes }}
+          {{ range .papers }}
+            {{ $papers = $papers | append . }}
           {{ end }}
+        {{ end }}
+        {{ range first 8 $papers }}
+        <div class="paper-entry">
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+          <span class="paper-venue-small">{{ .venue }}</span>
+        </div>
+        {{ end }}
       </div>
-      </ul>
     </div>
   </div>
 </div>

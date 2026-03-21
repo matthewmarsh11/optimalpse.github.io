@@ -347,6 +347,10 @@ caption {
   color: red;
 }
 
+.fa-linkedin {
+  color: #0077B5;
+}
+
 .flex-active-slide {
   text-align: center;
 }
@@ -380,6 +384,83 @@ caption {
 
 .latest-research-posts {
   padding-top: 0px; /* Add padding above the latest research posts */
+}
+
+/* Research theme buttons on homepage */
+.research-theme-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.theme-button {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px 14px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.theme-button:hover {
+  background-color: #cececf;
+  transform: scale(1.05);
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Latest papers on homepage */
+.latest-papers .paper-entry {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.latest-papers .paper-entry a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.latest-papers .paper-entry:hover {
+  background-color: #cececf;
+  transform: scale(1.05);
+}
+
+.latest-papers .paper-venue-small {
+  display: block;
+  font-size: 0.8rem;
+  color: #666666;
+  margin-top: 4px;
+}
+
+/* Visitors compact list */
+.visitors-list {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  column-gap: 30px;
+}
+
+.visitors-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  break-inside: avoid;
+}
+
+.visitors-list li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.visitors-list li a:hover {
+  text-decoration: underline;
 }
 
 .nav-link .caret {

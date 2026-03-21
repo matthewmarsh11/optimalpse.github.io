@@ -50,6 +50,11 @@ social:
     link: https://www.youtube.com/@optimlpse5033
     display:
       header: true
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/company/optiml-pse/
+    display:
+      header: true
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
