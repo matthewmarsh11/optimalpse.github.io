@@ -28,6 +28,10 @@ main:
     parent: research
     url: "research/#sustainability"
     weight: 5
+  - name: All Publications
+    parent: research
+    url: "research/#all-publications"
+    weight: 6
   - name: News
     url: news
     weight: 20
