@@ -1,6 +1,19 @@
 ---
 title: Contact & Opportunities
 ---
+
+## PhD Applicants
+
+We welcome applications from prospective PhD students who are interested in joining our research group. Please note the following requirements:
+
+1. Applicants must have a good, First-Class (or equivalent), 4-year degree in **chemical engineering**, **process engineering**, **control engineering**, **computer science**, or other related discipline.
+
+2. Research in our group requires a strong understanding of mathematics, algorithms, statistics, and dynamic systems. Candidates must be willing to develop proficiency in these areas.
+
+3. High standards of written and spoken English are essential. Short-listed applicants will be interviewed.
+
+If you meet these requirements and are interested in pursuing a PhD with us, please follow the application process outlined below.
+
 ## PhD Scholarships
 
 Funding is available through a number of scholarships including:
@@ -16,17 +29,6 @@ Funding is available through a number of scholarships including:
 - [Royal Society's Newton International Fellowship](https://royalsociety.org/grants/newton-international/)
 
 
-## PhD Applicants
-
-We welcome applications from prospective PhD students who are interested in joining our research group. Please note the following requirements:
-
-1. Applicants must have a good, First-Class (or equivalent), 4-year degree in **chemical engineering**, **process engineering**, **control engineering**, **computer science**, or other related discipline.
-
-2. Research in our group requires a strong understanding of mathematics, algorithms, statistics, and dynamic systems. Candidates must be willing to develop proficiency in these areas.
-
-3. High standards of written and spoken English are essential. Short-listed applicants will be interviewed.
-
-If you meet these requirements and are interested in pursuing a PhD with us, please follow the application process outlined below.
 
 ## Application Process
 
