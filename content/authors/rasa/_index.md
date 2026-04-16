@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: ML Engineer Intern, Solve Chemistry
+role: ML Engineer Intern at Solve Chemistry, former Research Assistant (2025). 
 
 
 # Organizations/Affiliations
