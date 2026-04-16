@@ -78,7 +78,7 @@
     return entry.journal || entry.booktitle || entry.publisher || '';
   }
 
-  fetch('/mypublications.bib')
+  fetch('/mypublications.bib?v=' + new Date().getTime())
     .then(function(response) { return response.text(); })
     .then(function(bibtex) {
       var entries = parseBibtex(bibtex);

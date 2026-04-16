@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant in Hierarchical Control Strategy and Reinforcement Learning for Process Control
+role: ML Engineer Intern, Solve Chemistry
 
 
 # Organizations/Affiliations
@@ -60,7 +60,7 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Postdoctoral & Affiliated Researchers
+  - Alumni
 ---
 
 Rasa is a research assistant working on multi-timescale hierarchical control architectures that integrate reinforcement learning with model predictive control for process systems. He completed his postgraduate studies at Imperial College London and his bachelor's degree in chemical engineering at the University of Tehran, and has worked in industry as a process engineering intern. Outside of research, he enjoys playing the piano and creating digital 3D art.
