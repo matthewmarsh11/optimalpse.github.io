@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Lavinia Ghilardi
+title: Dr. Lavinia Ghilardi
 
 # Full name (for SEO)
 first_name: Lavinia
