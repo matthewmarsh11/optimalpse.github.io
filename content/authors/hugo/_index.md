@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Hugo Bellamy
+title: Dr. Hugo Bellamy
 
 # Full name (for SEO)
 first_name: Hugo
