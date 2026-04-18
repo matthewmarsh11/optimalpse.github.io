@@ -27,6 +27,7 @@ bio: Max is a PhD student with a research interest in applying and developing de
 interests:
   - Reinforcement Learning
   - Process Control
+  - Bayesian Optimisation
 
 education:
   courses:
@@ -39,6 +40,9 @@ education:
 
 professional experience:
   experiences:
+    - Experience: Machine Learning Intern
+      institution: Secondmind Ltd.
+      year: 2025-2026
     - experience: Process Engineering Intern
       institution: SLR Consulting
       year: 2022
@@ -57,7 +61,9 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/MaximilianB2
-  
+  - icon: laptop
+    icon_pack: fas
+    link: https://maximilianb2.github.io
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
