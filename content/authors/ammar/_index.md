@@ -35,11 +35,8 @@ interests:
 education:
   courses:
     - course: MEng Chemical  Engineering
-      institution: Imperial College London
+      institution: University of Manchester
       year: 2021-2025
-
-# professional experience:
-#   experiences:
 
 
 # Social/Academic Networking
