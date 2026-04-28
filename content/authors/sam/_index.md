@@ -15,7 +15,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Multi-Agent LLMs for Chemical Lab Management Assistance
+role: Integration of AI and Digital Twins to enhance manufacturing and lab operations
 
 # Organizations/Affiliations
 # organizations:
