@@ -22,12 +22,13 @@ role: Probabilistic Machine Learning for Modelling, Control and Optimisation of 
 #     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Matthew is a PhD candidate researching Data Driven Modelling, Optimisation and Control of systems subject to uncertainty. He completed the MEng here at Imperial in 2024, and spent his penultimate undergraduate summer on the Trading Floor at HSBC. In his spare time he enjoys playing hockey and often doesn't enjoy following the continued lows of Everton Football Club.
+bio: Matthew is a PhD candidate researching Probabilistic Machine Learning Methods for use within Modelling, Optimisation and Control of Uncertain Systems. He completed the MEng here at Imperial in 2024, and spent his penultimate undergraduate summer on the Trading Floor at HSBC. In his spare time he enjoys playing hockey and often doesn't enjoy following the continued lows of Everton Football Club.
 
 interests:
-  - Data-driven Optimization
+  - Probabilistic Machine Learning
   - Deep Learning in Chemical Engineering
   - Process Control
+  - Bayesian Statistics
 
 education:
   courses:
@@ -58,6 +59,9 @@ social:
   - icon: laptop
     icon_pack: fas
     link: https://matthewmarsh11.github.io/
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com/citations?user=wR6UWRQAAAAJ&hl=en
     
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
