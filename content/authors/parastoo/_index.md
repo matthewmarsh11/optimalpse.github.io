@@ -22,7 +22,7 @@ role: Gaussian Process based Stochastic Model Predictive Control of Industrial P
 #     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Parastoo is a visiting PhD from TU Berlin / BIFOLD where she researches inorganic material modelling with Machine Learning and explainable AI. She previously obtained her MSc. in Process, Energy and Environmental System Engineering from TU Berlin and her BSc. in Chemical Engineering from Polytechnic Tehran (Amir Kabir University).
+bio: Parastoo is a visiting PhD researcher from the Machine Learning Group at TU Berlin / BIFOLD, where she is completing an industrial doctorate in collaboration with BASF on machine learning and explainable AI for inorganic material and catalyst design. Her research addresses the practical challenges of learning from experimental datasets with severe class imbalance and limited labeled samples, using interpretability methods; including layer-wise relevance propagation (LRP) and SHAP-based attribution to translate model outputs into actionable guidance for experimentalists designing the next round of synthesis. At OptiML, she applies Bayesian optimization with Gaussian process surrogates to bioprocess control, developing sequential experiment design strategies that extract maximum information from costly fermentation runs. Her work has appeared in ACS (Editors' Choice) and at NeurIPS workshops.
 
 interests:
   - Explainable AI
@@ -61,5 +61,4 @@ email: ''
 user_groups:
   - Visitors
 ---
-
-Parastoo is a visiting PhD from TU Berlin / BIFOLD where she researches inorganic material modelling with Machine Learning and explainable AI. She previously obtained her MSc. in Process, Energy and Environmental System Engineering from TU Berlin and her BSc. in Chemical Engineering from Polytechnic Tehran (Amir Kabir University).
+Parastoo is a visiting PhD researcher from the Machine Learning Group at TU Berlin / BIFOLD, where she is completing an industrial doctorate in collaboration with BASF on machine learning and explainable AI for inorganic material and catalyst design. Her research addresses the practical challenges of learning from experimental datasets with severe class imbalance and limited labeled samples, using interpretability methods — including layer-wise relevance propagation (LRP) and SHAP-based attribution — to translate model outputs into actionable guidance for experimentalists designing the next round of synthesis. At OptiML, she applies Bayesian optimization with Gaussian process surrogates to bioprocess control, developing sequential experiment design strategies that extract maximum information from costly fermentation runs. Her work has appeared in ACS (Editors' Choice) and at NeurIPS workshops.
