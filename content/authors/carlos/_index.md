@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Sustainable process modelling and optimization
+role: Sustainable Process Modelling and Optimization
 
 # Organizations/Affiliations
 # organizations:
