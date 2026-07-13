@@ -15,9 +15,9 @@ sections:
           - Postdoctoral & Affiliated Researchers
           - PhD Students
           - Co-supervised PhD Students
-          - MRes Students
           - Administration
           - Alumni
+          - Masters' Students
           - Visitors
       sort_by: Params.last_name
       sort_ascending: true
