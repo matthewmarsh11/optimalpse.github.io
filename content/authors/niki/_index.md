@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Founder at Lamb Labs (YC 26)
+role: Founder at Lamb Labs (YC 26), former PhD student at OptiML (2022-26)
 
 # Organizations/Affiliations
 # organizations:
