@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Niki Kotecha
+title: Dr. Niki Kotecha
 
 # Full name (for SEO)
 first_name: Niki
@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Multi-Agent Reinforcement Learning for Supply Chain Operations
+role: Founder at Lamb Labs (YC 26)
 
 # Organizations/Affiliations
 # organizations:
@@ -61,7 +61,7 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - PhD Students
+  - Alumni
 ---
 
 Niki Kotecha is a PhD Candidate with a research focus on developing reinforcement learning algorithms for inventory control. She is also interested in multi-agent systems applied to supply chain optimisation. Before her PhD, she previously completed her MEng and BA in Chemical Engineering at the University of Cambridge.
